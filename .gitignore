@@ -1,0 +1,57 @@
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ──────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+
+# ── PyTorch / model checkpoints ──────────────────────────
+checkpoints/
+baseline_checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# ── Test / result images ──────────────────────────────────
+test_results/
+HM_CWMAT_SAFE*/
+
+# ── Jupyter notebooks ─────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Data ─────────────────────────────────────────────────
+dataset/
+*.h5
+*.hdf5
+*.nii
+*.nii.gz
+*.dcm
+
+# ── Logs ─────────────────────────────────────────────────
+logs/
+runs/
+*.log
+*.csv
+
+# ── OS / editor ───────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Compiled extensions ───────────────────────────────────
+*.so
+*.dll
