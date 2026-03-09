@@ -41,47 +41,7 @@ This work proposes a **hybrid multimodal denoising framework** that:
 
 The proposed model (Fig. 1 from the paper) consists of two parallel networks merged through gated cross-modal fusion:
 
-```
-                      Noisy DWI Image (H × W × 1)
-                               │
-               ┌───────────────┴───────────────┐
-               │                               │
-        NETWORK 1                         NETWORK 2
-   (Spatial Image Encoder)          (Signal-Domain Branch)
-               │                               │
-         3×3 CONV                        2D Discrete
-     + Noise Embedding (σ)             Wavelet Transform
-               │                               │
-      Downsampling                   Wavelet Coefficients
-    (Patch Merging)                 (Low-freq LL + High-freq
-               │                     LH, HL, HH subbands)
-               │                               │
-    Swin Transformer                     3×3 CONV Embed
-      Blocks (×3)                              │
-    [Window-based                    Signal Encoder
-    Multi-Head SA]                  (Restormer Blocks ×2)
-    [Feed-Forward]                   [MDTA + GDFN]
-               │                               │
-      Upsampling                               │
-    (Patch Merging)               ┌────────────┘
-               │                  │
-               └──────────────────┘
-                        │
-          Gated Cross-Modal Fusion
-            F_fused = α·Fs + (1-α)·Fc
-          [AdaptiveAvgPool → Sigmoid gate]
-                        │
-            3×3 CONV + Restormer
-             Refinement Blocks (×3)
-             [MDTA channel-attention]
-              [Gated DConv FFN]
-                        │
-               Residual Head (3×3 CONV)
-                        │
-            X̂ = Y − N̂  (residual learning)
-                        │
-               Denoised DWI Image (H × W × 1)
-```
+![Proposed Hybrid Model Architecture](images/architecture.jpg)
 
 ### Key Components
 
