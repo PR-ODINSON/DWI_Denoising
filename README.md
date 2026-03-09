@@ -1,6 +1,8 @@
 # Multimodal DWI Denoising Using Image and Signal Representations
 
-**MICCAI 2026** | Anonymized Authors | anonymous@anonymous.com
+**MICCAI 2026** | Prithviraj Verma · Prasun Chandra Tripathi · Prabhat Dasena
+
+**Authors:** Prithviraj Verma ([Prithviraj.Verma.23co@iitram.ac.in](mailto:Prithviraj.Verma.23co@iitram.ac.in)) · Prasun Chandra Tripathi ([Prasunchandratripathi@iitram.ac.in](mailto:Prasunchandratripathi@iitram.ac.in)) · Prabhat Dasena ([p.dansena23@gmail.com](mailto:p.dansena23@gmail.com))
 
 > *Diffusion-weighted imaging (DWI) is widely used in whole-body cancer screening but suffers from long acquisition times. Reducing the number of acquisitions introduces signal-dependent noise, significantly degrading image quality. We propose a hybrid multimodal framework that jointly leverages spatial image representations and signal-domain wavelet features to robustly suppress Rician noise — achieving an average PSNR of **32.69 dB** and SSIM of **0.8113** across noise levels 1%–15%.*
 
@@ -330,8 +332,8 @@ Both baselines use the same Rician noise model, dataset splits, and evaluation p
 If you use this code or build on this work, please cite:
 
 ```bibtex
-@inproceedings{anon2026multimodal,
-  author    = {Anonymized Authors},
+@inproceedings{verma2026multimodal,
+  author    = {Prithviraj Verma and Prasun Chandra Tripathi and Prabhat Dasena},
   title     = {Multimodal {DWI} Denoising Using Image and Signal Representations},
   booktitle = {Medical Image Computing and Computer-Assisted Intervention ({MICCAI})},
   year      = {2026}
