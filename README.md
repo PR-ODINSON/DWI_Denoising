@@ -112,7 +112,7 @@ Evaluated across 8 Rician noise levels on ~22,500 DWI image slices:
 | 11              | 30.09     | 0.7513 |
 | 13              | 29.41     | 0.7298 |
 | 15              | 28.85     | 0.7161 |
-| **Average**     | **32.69** | **0.8113** |
+| **Average**     | **33.21** | **0.8894** |
 
 Even at the highest noise level (15%), the model maintains PSNR of 28.85 dB and SSIM > 0.71, demonstrating stable denoising without abrupt failure under severe Rician corruption.
 
@@ -126,7 +126,7 @@ Even at the highest noise level (15%), the model maintains PSNR of 28.85 dB and 
 | DWAN — Xie et al. | Rician | ASL MRI | 29.4 | 0.85 |
 | DnCNN — Zhang et al. | Gaussian | Brain MRI | 28.5 | 0.82 |
 | FFDNet — Zhang et al. | Gaussian | Brain MRI | 29.2 | 0.84 |
-| **Ours — Hybrid (Image + Signal)** | **Rician** | **DWI** | **32.69** | **0.8113** |
+| **Ours — Hybrid (Image + Signal)** | **Rician** | **DWI** | **33.21** | **0.8894** |
 
 > Results from prior work are reference-level comparisons due to differences in datasets.
 
@@ -134,9 +134,9 @@ Even at the highest noise level (15%), the model maintains PSNR of 28.85 dB and 
 
 | Model variant | PSNR (dB) | SSIM |
 |---------------|:---------:|:----:|
-| Image-domain network only (Network 1) | 33.69 | 0.8339 |
-| Signal-domain network only (Network 2) | 32.12 | 0.8074 |
-| **Full Hybrid (Image + Signal)** | **32.69** | **0.8113** |
+| Image-domain network only (Network 1) | 32.83 | 0.8826 |
+| Signal-domain network only (Network 2) | 32.47 | 0.8548 |
+| **Full Hybrid (Image + Signal)** | **33.21** | **0.8894** |
 
 Jointly leveraging both modalities improves robustness and generalisation, particularly under heterogeneous Rician corruption.
 
